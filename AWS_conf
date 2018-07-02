@@ -3,6 +3,19 @@ sudo apt-get install htop
 sudo apt-get install zsh
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# for R package
+sudo apt-get -y build-dep libcurl4-gnutls-dev
+sudo apt-get -y install libcurl4-gnutls-dev
+
+# for tidervisy package on a small machine
+sudo apt-get update     # refresh
+sudo apt-get install software-properties-common
+sudo add-apt-repository -y "ppa:marutter/rrutter"
+sudo add-apt-repository -y "ppa:marutter/c2d4u"
+sudo apt-get update     # now with new repos
+sudo apt-get install r-cran-readr
+
+
 Git public key: for Aws
 ssh-keygen -t rsa -b 4096 -C “xwang279@uic.edu”
 eval "$(ssh-agent -s)"

@@ -11,6 +11,7 @@ load_package <- function(x){
 }
 
 required_package <- c("sas7bdat", "MASS", "tidyverse", "foreach", "doRNG", "doParallel")
+load_package(required_package)
 
 ## better trace back
 if (!require("devtools")) install.packages("devtools")
