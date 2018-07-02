@@ -1,0 +1,12 @@
+AWS configure
+sudo apt-get install htop
+sudo apt-get install zsh
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+Git public key: for Aws
+ssh-keygen -t rsa -b 4096 -C “xwang279@uic.edu”
+eval "$(ssh-agent -s)"
+ssh-add /root/.ssh/id_rsa
+
+copy the keys 
+vim /root/.ssh/id_rsa.pub
